@@ -78,6 +78,9 @@ PRODUCT_PACKAGES += \
     mkfs.ntfs \
     mount.ntfs
 
+# Disable vendor restrictions
+PRODUCT_RESTRICT_VENDOR_FILES := false
+
 # Packages
 include vendor/pearl/config/packages.mk
 
