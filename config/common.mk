@@ -85,6 +85,9 @@ include vendor/pearl/config/branding.mk
 # Themes
 include vendor/themes/common.mk
 
+# Art
+include vendor/pearl/config/art.mk
+
 # Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/pearl/overlay/common
 DEVICE_PACKAGE_OVERLAYS += vendor/pearl/overlay/common
