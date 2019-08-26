@@ -42,14 +42,14 @@ PRODUCT_COPY_FILES += \
 
 # Backup tool
 PRODUCT_COPY_FILES += \
-    vendor/extras/build/tools/backuptool.sh:install/bin/backuptool.sh \
-    vendor/extras/build/tools/backuptool.functions:install/bin/backuptool.functions \
-    vendor/extras/build/tools/50-pearl.sh:system/addon.d/50-pearl.sh
+    vendor/pearl/build/tools/backuptool.sh:install/bin/backuptool.sh \
+    vendor/pearl/build/tools/backuptool.functions:install/bin/backuptool.functions \
+    vendor/pearl/build/tools/50-pearl.sh:system/addon.d/50-pearl.sh
 
 # Weather client
 #PRODUCT_COPY_FILES += \
-#    vendor/du/prebuilt/common/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml \
-#    vendor/du/prebuilt/common/etc/default-permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml
+#    vendor/pearl/prebuilt/common/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml \
+#    vendor/pearl/prebuilt/common/etc/default-permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml
 
 # Packages
 include vendor/pearl/config/packages.mk
