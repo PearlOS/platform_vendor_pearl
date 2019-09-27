@@ -3,6 +3,7 @@ PRODUCT_PACKAGES += \
     WallpaperPicker2 \
     ThemePicker \
     NexusLauncherRelease \
+    NexusLauncherReleaseOverlay \
     SetupWizardOverlay \
     PixelThemes \
     Recorder
