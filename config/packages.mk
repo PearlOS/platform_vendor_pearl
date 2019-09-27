@@ -6,6 +6,7 @@ PRODUCT_PACKAGES += \
     NexusLauncherReleaseOverlay \
     SetupWizardOverlay \
     PixelThemes \
+    GalleryGoPrebuilt \
     Recorder
 
 # Include librsjni explicitly to workaround GMS issue
