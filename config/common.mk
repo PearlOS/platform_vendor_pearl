@@ -66,7 +66,8 @@ PRODUCT_COPY_FILES += \
 
 # Power whitelist
 PRODUCT_COPY_FILES += \
-    vendor/pearl/prebuilt/common/etc/permissions/pearl-power-whitelist.xml:system/etc/sysconfig/pearl-power-whitelist.xml
+    vendor/pearl/prebuilt/common/etc/permissions/pearl-power-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/pearl-power-whitelist.xml \
+    vendor/pearl/prebuilt/common/etc/permissions/privapp-permissions-pearl.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-pearl.xml
 
 # Filesystems tools
 PRODUCT_PACKAGES += \

@@ -1,7 +1,8 @@
 # Packages
 PRODUCT_PACKAGES += \
     WallpaperPicker2 \
-    ThemePicker
+    ThemePicker \
+    NexusLauncherRelease
 
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
