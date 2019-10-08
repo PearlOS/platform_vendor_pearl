@@ -67,6 +67,7 @@ PRODUCT_PACKAGES += \
     fsck.ntfs \
     mke2fs \
     mkfs.exfat \
+    nano \
     mkfs.ntfs \
     mount.ntfs
 
