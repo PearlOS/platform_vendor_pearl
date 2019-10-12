@@ -3,7 +3,8 @@ PRODUCT_PACKAGES += \
     WallpaperPicker2 \
     ThemePicker \
     NexusLauncherRelease \
-    SetupWizardOverlay
+    SetupWizardOverlay \
+    PixelThemes 
 
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
