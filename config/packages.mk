@@ -9,7 +9,8 @@ PRODUCT_PACKAGES += \
     PixelThemes \
     GalleryGoPrebuilt \
     Recorder \
-    SettingsIntelligenceGooglePrebuilt
+    SettingsIntelligenceGooglePrebuilt \
+    SoundPickerPrebuilt
 
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
