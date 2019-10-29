@@ -12,6 +12,11 @@ PRODUCT_PACKAGES += \
     SettingsIntelligenceGooglePrebuilt \
     SoundPickerPrebuilt
 
+# Gradients
+PRODUCT_PACKAGES += \
+    GradientSkyline \
+    GradientSublime
+
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
     librsjni
