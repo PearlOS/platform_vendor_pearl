@@ -11,6 +11,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 endif
 
 ifneq ($(TARGET_BUILD_VARIANT),user)
+PRODUCT_PACKAGES += \
+    adb_root
 # Thank you, please drive thru!
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.dun.override=0
 endif
