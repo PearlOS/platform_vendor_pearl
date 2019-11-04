@@ -6,6 +6,7 @@ PRODUCT_PACKAGES += \
     NexusLauncherRelease \
     NexusLauncherReleaseOverlay \
     PixelSetupWizardOverlay \
+    PixelSetupWizardAodOverlay \
     PixelThemes \
     GalleryGoPrebuilt \
     Recorder \
