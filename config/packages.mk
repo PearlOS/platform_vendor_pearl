@@ -14,8 +14,16 @@ PRODUCT_PACKAGES += \
 
 # Gradients
 PRODUCT_PACKAGES += \
+    GradientBurningOrange \
+    GradientNightMare \
+    GradientOrangeFun \
+    GradientPurple \
+    GradientQuepal \
+    GradientSkyBlue \
     GradientSkyline \
-    GradientSublime
+    GradientSublime \
+    GradientSunset \
+    GradientVanusa
 
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
