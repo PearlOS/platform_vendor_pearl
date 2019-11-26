@@ -47,6 +47,10 @@ PRODUCT_COPY_FILES += \
     vendor/pearl/prebuilt/common/bin/50-pearl.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-pearl.sh \
     vendor/pearl/prebuilt/common/bin/blacklist:$(TARGET_COPY_OUT_SYSTEM)/addon.d/blacklist
 
+# system mount
+PRODUCT_COPY_FILES += \
+    vendor/pearl/prebuilt/common/bin/system-mount.sh:install/bin/system-mount.sh
+
 # Recorder permissions
 PRODUCT_COPY_FILES += \
     vendor/pearl/prebuilt/common/etc/permissions/privapp-permissions-recorder.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-recorder.xml
