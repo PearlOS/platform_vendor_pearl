@@ -15,6 +15,7 @@
 -->
 
 <permissions>
+
     <privapp-permissions package="com.android.camera2">
         <permission name="android.permission.BIND_WALLPAPER"/>
         <permission name="android.permission.PREVENT_POWER_KEY"/>
@@ -23,12 +24,6 @@
     <!-- Additional permissions on top of privapp-permissions-platform.xml -->
     <privapp-permissions package="com.android.dialer">
 	<permission name="android.permission.CAPTURE_AUDIO_OUTPUT"/>
-    </privapp-permissions>
-
-    <privapp-permissions package="com.android.fmradio">
-        <permission name="android.permission.ACCESS_FM_RADIO"/>
-        <permission name="android.permission.MODIFY_AUDIO_ROUTING"/>
-        <permission name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.apps.nexuslauncher">
