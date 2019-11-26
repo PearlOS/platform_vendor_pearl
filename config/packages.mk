@@ -7,7 +7,8 @@ PRODUCT_PACKAGES += \
     SetupWizardOverlay \
     PixelThemes \
     GalleryGoPrebuilt \
-    Recorder
+    Recorder \
+    SettingsIntelligenceGooglePrebuilt
 
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \

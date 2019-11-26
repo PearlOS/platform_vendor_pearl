@@ -44,14 +44,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/Vendor_045e_Product_0719.kl
 
-# Do not include art debug targets
-PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
-
-# Strip the local variable table and the local variable type table to reduce
-# the size of the system image. This has no bearing on stack traces, but will
-# leave less information available via JDWP.
-PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
-
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/pearl/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
@@ -71,7 +63,8 @@ PRODUCT_COPY_FILES += \
 # Power whitelist
 PRODUCT_COPY_FILES += \
     vendor/pearl/prebuilt/common/etc/permissions/pearl-power-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/pearl-power-whitelist.xml \
-    vendor/pearl/prebuilt/common/etc/permissions/privapp-permissions-pearl.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-pearl.xml
+    vendor/pearl/prebuilt/common/etc/permissions/privapp-permissions-pearl.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-pearl.xml \
+    vendor/pearl/prebuilt/common/etc/permissions/pearl-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/pearl-hiddenapi-package-whitelist.xml
 
 # Filesystems tools
 PRODUCT_PACKAGES += \
@@ -96,3 +89,4 @@ include vendor/themes/common.mk
 
 # Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/pearl/overlay/common
+DEVICE_PACKAGE_OVERLAYS += vendor/pearl/overlay/common
