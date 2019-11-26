@@ -4,7 +4,8 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     NexusLauncherRelease \
     SetupWizardOverlay \
-    PixelThemes 
+    PixelThemes \
+    Recorder
 
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \

@@ -64,6 +64,10 @@ PRODUCT_COPY_FILES += \
 #    vendor/pearl/prebuilt/common/etc/permissions/org.pixelexperience.weather.client.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/org.pixelexperience.weather.client.xml \
 #    vendor/pearl/prebuilt/common/etc/default-permissions/org.pixelexperience.weather.client.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/org.pixelexperience.weather.client.xml
 
+# Recorder permissions
+PRODUCT_COPY_FILES += \
+    vendor/pearl/prebuilt/common/etc/permissions/privapp-permissions-recorder.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-recorder.xml
+
 # Power whitelist
 PRODUCT_COPY_FILES += \
     vendor/pearl/prebuilt/common/etc/permissions/pearl-power-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/pearl-power-whitelist.xml \
