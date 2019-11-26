@@ -32,24 +32,46 @@ PRODUCT_COPY_FILES += \
     vendor/pearl/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/pearl/prebuilt/common/bin/sysinit:system/bin/sysinit
 
-# Init files
-PRODUCT_COPY_FILES += \
-    vendor/pearl/prebuilt/common/etc/init.local.rc:system/etc/init/dirtyunicorns.rc
+# Copy all custom init rc files
+$(foreach f,$(wildcard vendor/du/prebuilt/common/etc/init/*.rc),\
+    $(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
 
-# Don't export PS1 in /system/etc/mkshrc.
+# Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
-    vendor/pearl/prebuilt/common/etc/mkshrc:system/etc/mkshrc
+    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
-# Backup tool
+# Enable wireless Xbox 360 controller support
 PRODUCT_COPY_FILES += \
-    vendor/pearl/build/tools/backuptool.sh:install/bin/backuptool.sh \
-    vendor/pearl/build/tools/backuptool.functions:install/bin/backuptool.functions \
-    vendor/pearl/build/tools/50-pearl.sh:system/addon.d/50-pearl.sh
+    frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
+
+# Do not include art debug targets
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+
+# Strip the local variable table and the local variable type table to reduce
+# the size of the system image. This has no bearing on stack traces, but will
+# leave less information available via JDWP.
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+
+# Backup Tool
+PRODUCT_COPY_FILES += \
+    vendor/pearl/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/pearl/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/pearl/prebuilt/common/bin/50-pearl.sh:system/addon.d/50-pearl.sh \
+    vendor/pearl/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 
 # Weather client
 #PRODUCT_COPY_FILES += \
 #    vendor/pearl/prebuilt/common/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml \
 #    vendor/pearl/prebuilt/common/etc/default-permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml
+
+# Filesystems tools
+PRODUCT_PACKAGES += \
+    fsck.exfat \
+    fsck.ntfs \
+    mke2fs \
+    mkfs.exfat \
+    mkfs.ntfs \
+    mount.ntfs
 
 # Packages
 include vendor/pearl/config/packages.mk
