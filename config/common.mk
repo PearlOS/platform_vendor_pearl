@@ -64,6 +64,10 @@ PRODUCT_COPY_FILES += \
 #    vendor/pearl/prebuilt/common/etc/permissions/org.pixelexperience.weather.client.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/org.pixelexperience.weather.client.xml \
 #    vendor/pearl/prebuilt/common/etc/default-permissions/org.pixelexperience.weather.client.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/org.pixelexperience.weather.client.xml
 
+# Power whitelist
+PRODUCT_COPY_FILES += \
+    vendor/pearl/prebuilt/common/etc/permissions/pearl-power-whitelist.xml:system/etc/sysconfig/pearl-power-whitelist.xml
+
 # Filesystems tools
 PRODUCT_PACKAGES += \
     fsck.exfat \
