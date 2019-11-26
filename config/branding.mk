@@ -1,30 +1,20 @@
 # Versioning System
-DU_BASE_VERSION = v14.0
+PEARL_BASE_VERSION = Alpha-Q
+PEARL_BUILD_TYPE := Pearl-OS
 
-ifndef DU_BUILD_TYPE
-    DU_BUILD_TYPE := UNOFFICIAL
-endif
-
-# Only include DU-Updater for official, weeklies, and rc builds
-ifeq ($(filter-out OFFICIAL WEEKLIES RC,$(DU_BUILD_TYPE)),)
-    PRODUCT_PACKAGES += \
-        DU-Updater
-endif
-
-# Sign builds if building an official or weekly build
-ifeq ($(filter-out OFFICIAL WEEKLIES,$(DU_BUILD_TYPE)),)
-    PRODUCT_DEFAULT_DEV_CERTIFICATE := $(KEYS_LOCATION)
-endif
+TARGET_PRODUCT_SHORT := $(subst du_,,$(PEARL_BUILD_TYPE))
 
 # Set all versions
 BUILD_DATE := $(shell date -u +%Y%m%d)
 BUILD_TIME := $(shell date -u +%H%M)
-DU_VERSION := $(TARGET_PRODUCT)-$(DU_BASE_VERSION)-$(BUILD_DATE)-$(BUILD_TIME)-$(DU_BUILD_TYPE)
+PEARL_VERSION := $(PEARL_BUILD_TYPE)-$(PEARL_BASE_VERSION)-$(PEARL_BUILD)-$(BUILD_DATE)-$(BUILD_TIME)
 TARGET_BACON_NAME := $(DU_VERSION)
-ROM_FINGERPRINT := DirtyUnicorns/$(PLATFORM_VERSION)/$(DU_BUILD_TYPE)/$(BUILD_DATE)$(BUILD_TIME)
+ROM_FINGERPRINT := Pearl-OS/$(PLATFORM_VERSION)/$(DU_BUILD_TYPE)/$(BUILD_DATE)$(BUILD_TIME)
+BUILD_DATE_TIME := $(BUILD_TIME)$(BUILD_DATE)
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
-    ro.du.version=$(DU_VERSION) \
-    ro.mod.version=$(DU_BUILD_TYPE)-$(DU_BASE_VERSION)-$(BUILD_DATE) \
-    ro.du.fingerprint=$(ROM_FINGERPRINT)
+    ro.build.datetime=$(BUILD_DATE_TIME) \
+    ro.pearl.build.date=$(BUILD_DATE) \
+    ro.pearl.version=$(PEARL_VERSION) \
+    ro.pearl.fingerprint=$(ROM_FINGERPRINT)
