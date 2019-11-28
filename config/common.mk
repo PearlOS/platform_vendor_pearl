@@ -57,7 +57,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     vendor/pearl/prebuilt/common/etc/permissions/pearl-power-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/pearl-power-whitelist.xml \
-    vendor/pearl/prebuilt/common/etc/permissions/privapp-permissions-pearl--system.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-pearl-system.xml \
+    vendor/pearl/prebuilt/common/etc/permissions/privapp-permissions-pearl-system.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-pearl-system.xml \
     vendor/pearl/prebuilt/common/etc/permissions/privapp-permissions-pearl-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-pearl-product.xml \
     vendor/pearl/prebuilt/common/etc/permissions/pearl-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/pearl-hiddenapi-package-whitelist.xml
 

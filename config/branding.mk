@@ -2,7 +2,7 @@
 PEARL_BASE_VERSION = Alpha-Q
 PEARL_BUILD_TYPE := Pearl-OS
 
-TARGET_PRODUCT_SHORT := $(subst du_,,$(PEARL_BUILD_TYPE))
+TARGET_PRODUCT_SHORT := $(subst pearl_,,$(PEARL_BUILD_TYPE))
 
 # Set all versions
 BUILD_DATE := $(shell date -u +%Y%m%d)
