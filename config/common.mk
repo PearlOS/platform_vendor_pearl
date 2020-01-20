@@ -164,4 +164,7 @@ include vendor/pixelstyle/config.mk
 # Customization
 include vendor/google-customization/config.mk
 
+# Include DU theme files
+include vendor/pearl/themes/backgrounds/themes.mk
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
