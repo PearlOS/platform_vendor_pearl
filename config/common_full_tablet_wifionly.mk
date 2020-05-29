@@ -1,2 +1,2 @@
-# Inherit full common PixelExperience stuff
-$(call inherit-product, vendor/aosp/config/common_full.mk)
+# Inherit full common PearlOS stuff
+$(call inherit-product, vendor/pearl/config/common_full.mk)
