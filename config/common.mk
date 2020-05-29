@@ -154,7 +154,9 @@ include vendor/pearl/config/branding.mk
 include vendor/pearl/config/ota.mk
 
 # GApps
+ifeq ($(WITH_GAPPS),true)
 include vendor/gapps/config.mk
+endif
 
 # Pixel Style
 include vendor/pixelstyle/config.mk
