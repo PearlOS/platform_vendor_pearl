@@ -135,6 +135,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Recorder
 
+# Allows registering device to Google easier for gapps
+# Integrates package for easier Google Pay fixing
+PRODUCT_PACKAGES += \
+    sqlite3
+
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED := false
 ifeq ($(TARGET_GAPPS_ARCH),arm64)
